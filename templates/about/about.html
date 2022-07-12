@@ -1,0 +1,650 @@
+{% extends 'base.html' %} 
+{% block content %} 
+{% load static %}
+
+<div  id="profile" class=" w-full max-w-6xl flex-wrap mx-auto my-3 w-full lg:w-5/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0"> 
+<div class="flex flex-wrap mx-4">
+
+<!--TITULO_1-->
+<strong style="color: green; font-size: 35px">
+    <section class="resume-section" id="Titulo1">
+        DESARROLLO WEB
+</strong>
+<!--TITULO_1-->
+
+<!--COMPONENTES-->
+<p style="color: green; font-size: 19px">Este sitio WEB se desarrollo con la ayuda de :
+    <p>Framework Django.
+    <p>Framework css Tailwind
+    <p>node.js
+        <br><br>
+<!--COMPONENTES-->
+
+<!--Django-->
+<h2 style="color: green; font-size: 35px">Django?</h2>
+    <P>Django es un framework de desarrollo web de código abierto, Desarrollado en Python, que respeta el patrón de diseño conocido como MODELO-VISTA-CONTROLADOR.
+        <br><br>
+<!--Django-->
+
+<!--Tailwind-->
+<h2 style="color: green; font-size: 35px">Tailwind?</h2>
+    <P>Tailwind CSS es un framework de CSS de código abierto para el diseño de páginas web. 
+    <p>La principal característica de esta biblioteca es que, a diferencia de otras como Bootstrap, no genera una serie de clases predefinidas
+        <br><br>
+<!--Tailwind-->
+
+<!--NODE-->
+<h2 style="color: green; font-size: 35px">Node.js?</h2>
+    <p>Node.js es un código abierto de JavaScript para la creación de aplicaciones de red. 
+    <p>Permite a los desarrolladores ejecutar el código en el lado del servidor y generar aplicaciones web.
+        <br><br>
+<!--NODE-->
+
+<!--TITULO_2-->
+<strong style="color: green; font-size: 35px">
+    <section class="resume-section" id="Titulo2">
+        ECHANDO UN VISTAZO A MI CODIGO
+</strong>
+<!--TITULO_2-->
+
+<!--AMBIENTE-->
+<h2 style="color: green; font-size: 35px">Creacion del ambiente</h2>
+    <p>Lo primero es lo primero antes de trabajar en un proyecto WEB como este deberiamos de crear un ambiente de desarrollo
+    <p>Un ambiente de desarollo en una estructura definida y reusable en el que se facilita el desarrollo web
+        <br><br>
+<!--AMBIENTE-->
+
+<!--INSTALAR_AMBIENTE-->
+<p class="py-1" style="color: green; font-size: 16px">Instalar Ambiente</p>
+    <div class="flex flex-wrap mx-2">
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        <p>pip install virtualenv env &nbsp; 
+    </blockquote>
+    </div>
+    <br/>
+    
+<!--INSTALAR_AMBIENTE-->
+
+<!--CREAR_AMBIENTE-->
+<p class="py-1" style="color: green; font-size: 16px">Crear Ambiente</p>
+    <div class="flex flex-wrap mx-2">
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        <p>virtualenv env &nbsp; 
+    </blockquote>
+    </div>
+    <br/>
+
+<!--CREAR_AMBIENTE-->
+
+<p>Ahora tenemos que activarlo del siguente modo
+    
+<!--ACTIVAR_WINDOWS-->
+<p class="py-1" style="color: green; font-size: 16px">Activar en WINDOWS</p>
+    <div class="flex flex-wrap mx-2">
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        <p>cd env/Scripts &nbsp; 
+        <p>activate
+        <p>cd../..
+    </blockquote>
+    </div>
+    <br/>
+
+<!--ACTIVAR_WINDOWS-->
+
+<!--ACTIVAR_LINUX-->
+<p class="py-1" style="color: green; font-size: 16px">Activar en LINUX</p>
+    <div class="flex flex-wrap mx-2">
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        source env/bin/activate &nbsp;
+    </blockquote>
+    </div> 
+        <br/>
+<!--ACTIVAR_LINUX-->
+
+<p>Despues de activar nuestro ambiente instalaremos unos requisitos
+
+<!--REQUIREMENTS-->
+<p class="py-1"style="color: green; font-size: 18px">creamos requirements.txt y copiamos esto</p>
+<div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    pillow==9.1.0
+    Django==3.2.6
+    Django-environ==0.4.5
+    Django-allauth==0.50.0
+    Django-tailwind==2.2.0                                                             
+        </code>
+    </pre>
+</div>
+        <br> 
+<!--REQUIREMENTS-->
+           
+<!--INSTALAR_REQUIREMENTS-->       
+<p class="py-1" style="color: green; font-size: 16px">Instalar requirements.txt</p>
+    <div class="flex flex-wrap mx-2">
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        pip install -r requirements.txt &nbsp; 
+    </blockquote>
+    </div>
+        <br/>
+<!--INSTALAR_REQUIREMENTS-->       
+
+<h2 style="color: green; font-size: 25px">Ya tenemos listo nuestro ambiente</h2>
+
+<p>ahora podemos dar rienda suelta a nuestras necesidades e imaginacion para poder desarrollar nuestro sitio WEB
+    
+<!--STARTPROJECT-->       
+<h2 style="color: green; font-size: 35px">STARTPROJECT</h2>
+<!--STARTPROJECT-->       
+
+<!--CREAR_CORE-->       
+<p class="py-1" style="color: green; font-size: 16px">Creamos core</p>
+    <div class="flex flex-wrap mx-2">
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        django-admin.py startproject .  &nbsp;
+    </blockquote>
+    </div>
+
+        <br/>
+<!--CREAR_CORE-->       
+
+<p>Ya tenemos core y tenemos que hacer unos ajustes
+<p>Para comenzar tenemos que ir a settings.py este archivo lo encontraremos dentro de core
+    
+<!--INSTALLED_APPS-->
+<p class="py-1"style="color: green; font-size: 18px">INSTALLED_APPS</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    'core',                                                                            
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--INSTALLED_APPS-->
+
+<!--IMPORTAMOS-->
+<p class="py-1"style="color: green; font-size: 18px">IMPORTAMOS</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    import os
+    import environ                                                                      
+        </code>
+    </pre>
+    </div>
+
+        <br>
+<!--IMPORTAMOS-->
+
+<!--AGREGAMOS ENVIRON-->
+<p class="py-1"style="color: green; font-size: 18px">AGREGAMOS ENVIRON</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    env    = environ.Env()                                                             
+    environ.Env.read_env()
+        </code>
+    </pre>
+    </div>
+
+        <br>
+<!--AGREGAMOS ENVIRON-->
+
+<!--ALLOWED_HOSTS-->
+<p class="py-1"style="color: green; font-size: 18px">Permiti cualquier nombre de host</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    ALLOWED_HOSTS  = ['*']                                                             
+        </code>
+    </pre>
+    </div>
+
+        <br>
+<!--ALLOWED_HOSTS-->
+
+<p>Ahora instalamos Tailwind esto hara que el proyecto se vea con mas estilo 
+    
+<!--INSTALLED_APPS-->
+<p class="py-1"style="color: green; font-size: 18px">INSTALLED_APPS</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    'tailwind',                                                                        
+        </code>
+    </div>
+    </pre>
+        <br>
+<!--INSTALLED_APPS-->
+
+<!--INIT-->
+<p class="py-1" style="color: green; font-size: 16px">En la Terminal ejecutamos</p>
+    <div class="flex flex-wrap mx-2">
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        python manage.py tailwind init &nbsp;
+    </blockquote>
+    </div>
+        <br/>
+<!--INIT-->
+
+<!--INSTALLED_APPS-->
+<p class="py-1"style="color: green; font-size: 18px">INSTALLED_APPS</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    'theme',                                                                           
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--INSTALLED_APPS-->
+
+<p>Ahora añadimos
+
+<!--THEME-->
+<p class="py-1"style="color: green; font-size: 18px">Abajo de INSTALLED_APPS</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    TAILWIND_APP_NAME = 'theme'
+    INTERNAL_IPS = ["127.0.0.1",]                                                      
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--THEME-->
+ 
+<!--INSTALL-->
+<p class="py-1" style="color: green; font-size: 16px">En la Terminal ejecutamos</p>
+    <div class="flex flex-wrap mx-2">
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        python manage.py tailwind install &nbsp;
+    </blockquote>
+    </div>
+        <br/>
+<!--INSTALL-->
+  
+<!--NODE-->
+<p class="py-1"style="color: green; font-size: 18px">node.js</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    #LINUX
+    NPM_BIN = "/usr/bin/npm"
+
+    #WINDOWS
+    NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"                                  
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--NODE-->
+
+<!--TEMPLATES-->    
+<p class="py-1"style="color: green; font-size: 18px">TEMPLATES</p>
+    <div class="flex flex-wrap mx-4">   
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    'DIRS': [os.path.join(BASE_DIR, 'templates')],
+
+    #añadimos estos urls al final
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]                              
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static_root') 
+    MEDIA_URL   = '/media/' 
+    MEDIA_ROOT  = os.path.join(BASE_DIR, 'media_static')
+        </code>
+    </pre>
+    </div>
+
+        <br>  
+<!--TEMPLATES-->
+
+<!--IMAGENES-->
+<p class="py-1" style="color: green; font-size: 16px">Imagenes</p>
+    <div class="flex flex-wrap mx-4">&nbsp;
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        <p>mkdir static 
+        <p>mkdir media &nbsp;   
+        <p>cd static
+        <p>mkdir img
+    </blockquote>
+    </div>
+        <br/>
+<!--IMAGENES-->
+
+<p>Dentro de static/img pondremos las imagenes de nuestro sitio
+
+<!--views.py-->
+<p class="py-1"style="color: green; font-size: 18px">views.py</p>
+<div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    from django.shortcuts import render
+    from django.views.generic import View
+
+    class HomeView(View):
+        def get(self,request, *args, **kwargs):
+            context={
+                
+            }
+            return render(request,'index.html', context)                               
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--views.py-->
+
+<!--urls.py-->
+<p class="py-1" style="color: green; font-size: 20px">urls.py</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    from django.conf import settings 
+    from django.conf.urls.static import static
+    from .views import HomeView
+                    
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', HomeView.as_view(), name="home"),   
+    ]        
+    if settings.DEBUG: 
+        urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+        urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--urls.py-->
+
+<!--MIGRACIONES-->
+<p class="py-1" style="color: green; font-size: 16px">Migraciones</p>
+    <div class="flex flex-wrap mx-1">
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        python manage.py migrate &nbsp;
+
+    </blockquote>
+    </div>
+        <br/>
+<!--MIGRACIONES-->
+
+<p>Ahora creamos los primeros archivos HTML para ello creamos una carpeta llamada templates y ahi creamos
+
+<P style="color: green; font-size: 16px">base.html
+    <p>
+<p style="color: green; font-size: 16px">index.html
+    <p>
+
+<br>
+<br>
+
+<h2 style="color: green; font-size: 35px">STARTAPP</h2>
+<p>Ahora pasamos a crear las app podemos crear solo una pero yo he creado cuatro es decir una para cada unayo recomiendo hacer esto sobretodo para tener un orden, este orden hara que sea mas facil programar y añadir nuevas cosasen un futuro cercano
+    <br><br>
+
+<!--STARTAPP-->
+<p class="py-1" style="color: green; font-size: 16px">Crear app</p>
+    <div class="flex flex-wrap mx-4">&nbsp;
+    <blockquote class="max-w-2xl bg-green-100 rounded border-l-8 border-green-600 text-dark italic pl-1 md:pl-3">
+        <p>django-admin startapp curriculum  &nbsp;
+        <p>django-admin startapp contacto
+        <p>django-admin startapp about
+        <p>django-admin startapp blog
+    </blockquote>
+    </div>
+        <br/>
+<!--STARTAPP-->
+
+<p>Al igual que en core tenemos que hacer unos ajustes en settings.py
+
+<!--INSTALLED_APPS-->
+<p class="py-1"style="color: green; font-size: 18px">INSTALLED_APPS</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    'curriculum',                                                                      
+    'about',
+    'contacto',
+    'blog',
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--INSTALLED_APPS-->
+
+<p>En urls.py añadimos los urls
+
+<!--urls.py-->
+<p class="py-1" style="color: green; font-size: 20px">urls.py</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    from django.contrib import admin
+    from django.urls import path,include
+    
+    from django.conf import settings 
+    from django.conf.urls.static import static
+    from .views import HomeView
+    
+    urlpatterns = [
+        path('', HomeView.as_view(), name="home"),
+        path('curriculum/', include('curriculum.urls',namespace='curriculum')),
+        path('contacto/', include('contacto.urls',namespace='contacto')),
+        path('accounts/', include('allauth.urls')),
+        path('admin/', admin.site.urls),
+        path('about/', include('about.urls',namespace='about')),
+        path('blog/', include('blog.urls',namespace='blog')),
+     
+    ]
+    
+    if settings.DEBUG: 
+        urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+        urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--urls.py-->
+
+<p> Ahora continuamos con la app blog 
+<p> blog es la app principal en la que crearemos nuestros modelos y usuarios para poder adeministrarla
+<p> Las otras apps solo tienen views.py y urls.py a diferencia de que cuenta con admin.py, forms.py, models.py, views.py y urls.py 
+
+<!--views.py-->
+<p class="py-1"style="color: green; font-size: 18px">views.py</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    from django.shortcuts import render
+    from django.views.generic import View,ListView, DetailView                         
+    from .models import Post, Script
+    from .forms import PostForm
+    
+    class blogView(View):
+        def get(self,request, *args, **kwargs):
+            context={
+        
+            }
+            return render(request,'blog/blog.html', context)
+    
+    class ScriptsListView(ListView):
+        model = Script
+    
+    class PostListView(ListView):
+        model = Post
+    
+    class PostDetailView(DetailView):
+        model = Post
+            
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--views.py-->
+
+<!--urls.py-->
+<p class="py-1"style="color: green; font-size: 18px">urls.py</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    from django.urls import path
+    from .views import blogView,PostListView,PostDetailView,ScriptsListView            
+    
+    app_name="blog"
+    
+    urlpatterns = [
+        path('', blogView.as_view(), name="home"),
+    
+        path('post/', PostListView.as_view(), name='list'),
+        path('post/<slug>/', PostDetailView.as_view(), name='detail'),
+    
+        path('scripts/', ScriptsListView.as_view(),name='lista'),
+    ]
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--urls.py-->
+
+<!--models.py-->
+<p class="py-1"style="color: green; font-size: 18px">models.py</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    from django.db import models
+    # Create your models here.
+    from django.contrib.auth.models import AbstractUser
+    from django.shortcuts import reverse
+    
+    class User(AbstractUser):
+        pass
+    
+        def __str__(self):
+            return self.username
+    
+    class Post(models.Model):
+        author = models.ForeignKey(User, on_delete=models.CASCADE)                     
+        title  = models.CharField(max_length=50)
+        abstract    = models.TextField()
+        thumbnail   = models.ImageField()
+    
+        title_1    = models.CharField(blank=True,max_length=50)
+        content_1  = models.TextField(blank=True)
+        nombreco_1 = models.CharField(blank=True,max_length=50)
+        code_1     = models.TextField(blank=True)
+        cita_1     = models.CharField(max_length=50,blank=True)
+    
+        title_2    = models.CharField(blank=True,max_length=50)
+        content_2  = models.TextField(blank=True)
+        nombreco_2 = models.CharField(blank=True,max_length=50)
+        code_2     = models.TextField(blank=True)
+        cita_2     = models.CharField(max_length=50,blank=True)
+        
+        title_3    = models.CharField(blank=True,max_length=50)
+        content_3  = models.TextField(blank=True)
+        nombreco_3 = models.CharField(blank=True,max_length=50)
+        code_3     = models.TextField(blank=True)
+        cita_3     = models.CharField(max_length=50,blank=True)
+    
+        title_4    = models.CharField(blank=True,max_length=50)
+        content_4  = models.TextField(blank=True)
+        nombreco_4 = models.CharField(blank=True,max_length=50)
+        code_4     = models.TextField(blank=True)
+        cita_4     = models.CharField(max_length=50,blank=True)
+
+        title_5    = models.CharField(blank=True,max_length=50)
+        content_5  = models.TextField(blank=True)
+        nombreco_5 = models.CharField(blank=True,max_length=50)
+        code_5     = models.TextField(blank=True)
+        cita_5     = models.CharField(max_length=50,blank=True)
+    
+        publish_date = models.DateField(auto_now_add=True)
+        last_updated = models.DateField(auto_now=True)
+        slug = models.SlugField()
+        def __str__(self):
+            return self.title
+    
+        def get_absolute_url(self):
+            return reverse("blog:detail", kwargs={"slug": self.slug})
+    
+    class Script(models.Model):
+    
+        dev = models.CharField(max_length=25)
+        script = models.FileField()
+        Lenguaje = models.CharField(max_length=25)
+        descripcion = models.CharField(max_length=75)
+        os     = models.CharField(max_length=25)
+        
+        def __str__(self):
+            return self.dev
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--models.py-->
+
+<!--forms.py-->
+<p class="py-1"style="color: green; font-size: 18px">forms.py</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    from django import forms
+    from .models import Post,Script
+    
+    class PostForm(forms.ModelForm):                                                   
+        class Meta:
+            model = Post
+            model = Script
+            fields = ("__all__")
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--forms.py-->
+
+<!--admin.py-->
+<p class="py-1"style="color: green; font-size: 18px">admin.py</p>
+    <div class="flex flex-wrap mx-4">
+    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+        <code class="break-words whitespace-pre-wrap ">
+    from django.contrib import admin
+    # Register your models here.
+    from .models import Post,User,Script                                                
+    
+    admin.site.register(User)
+    admin.site.register(Post)
+    admin.site.register(Script)
+        </code>
+    </pre>
+    </div>
+        <br>
+<!--admin.py-->
+
+<br>   
+
+    <div class="row items-center">
+        <div class="text-center">
+            <img src="{% static 'img/c9.jpg' %}" class="rounded-full w-80 mb-4 mx-auto"/>
+            <h5 class="text-xl font-medium leading-tight mb-2">
+                David Patricio Arango Lucar
+            </h5>
+            <p>
+                Ingeniero de sistemas y Desarrollador
+            </p>
+        </div>
+    </div>
+
+    <div class="p-4 w-full text-center">
+        <h5 class="mb-2 text-3xl font-bold dark:text-white">
+            Hey gracias por visitar mi sitio WEB
+        </h5>
+        <p>
+            Espero que hallas encontrado algo de utilidad
+        </p>
+    </div>
+</div>
+ 
+</div>
+
+
+{% endblock content %}
