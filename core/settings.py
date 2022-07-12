@@ -25,7 +25,11 @@ INSTALLED_APPS = [
     'theme',
     'curriculum',
     'about',
-    'contacto',    
+    'contacto', 
+    'blog',
+    'django.contrib.sites',
+    'allauth','allauth.account',
+    'allauth.socialaccount',   
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -102,3 +106,12 @@ MEDIA_URL  = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
+AUTH_USER_MODEL = 'blog.User'
