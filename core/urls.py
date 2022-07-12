@@ -13,6 +13,7 @@ urlpatterns = [
     path('curriculum/', include('curriculum.urls',namespace='curriculum')),
     path('contacto/', include('contacto.urls',namespace='contacto')),
     path('about/', include('about.urls',namespace='about')),
+    path('blog/', include('blog.urls',namespace='blog')),
 
     path('accounts/', include('allauth.urls')),
 

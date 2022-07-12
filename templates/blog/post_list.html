@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{% for object in object_list %}
+
+<a href="{{ object.get_absolute_url }}">
+  
+    <div class="max-w-2xl mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800" >
+        <img class="object-cover w-full h-64"src="{{object.thumbnail.url}}"alt="Article"/>
+    <div class="p-6">
+      
+        <div>
+            <span class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">Post {{object.slug}}</span>
+            <a href="{{ object.get_absolute_url }}"class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline">{{object.title}}</a>
+            <p href="{{ object.get_absolute_url }}"class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{object.abstract|truncatechars:225}}</p>
+        </div>
+      
+        <div class="mt-4">
+        <div class="flex items-center">
+        <div class="flex items-center">
+            <img class="object-cover h-10 rounded-full"src="{% static 'img/chon1.jpg' %}"alt="Avatar"/>
+            <a href="{{ object.get_absolute_url }}"class="mx-2 font-semibold text-gray-700 dark:text-gray-200">{{object.author}}</a>
+        </div>
+          <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">posted {{object.publish_date|timesince}}ago</span>
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+</a>
+
+<br /><hr class=" bg-transparent"/>
+
+{% endfor %} 
+{% endblock content %}
