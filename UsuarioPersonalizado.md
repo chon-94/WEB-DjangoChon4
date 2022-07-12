@@ -62,14 +62,14 @@ creamos esta clase
 ## core\settings.py:
 final
 
-    AUTH_USER_MODEL = 'bitacora.User'
+    AUTH_USER_MODEL = 'blog.User'
 
 migraciones:
 deberiamos de borrar la migracion en posts y tambien la base de datos crear
 
 nota me salia unmensajito para rellenar un valor inexisten o algo asi pero despues no xd
 
-    python manage.py makemigrations bitacora
+    python manage.py makemigrations blog
 migrar
 
     python manage.py migrate
@@ -80,7 +80,7 @@ crear el super user:
 
 qwerty852as46df79
 
-## bitacora\admin.py:
+## blog\admin.py:
 
     from .models import User
 
