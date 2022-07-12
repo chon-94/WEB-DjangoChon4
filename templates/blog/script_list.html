@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+
+<div class="container">
+    <div class="row">
+
+        {% for object in object_list %}
+
+        <div class="col-3">
+
+            <div class="card border-dark text-lime-400" style="max-width: 18rem;">
+                <div class="card-header bg-green-500 text-green-900">
+                    {{object.script}}
+                </div>
+                
+                    <div class="card-body bg-green-500 text-green-900">
+                        <h5 class="card-title">
+                            Disponible para: {{object.os}}
+                        </h5>
+                        <p class="card-text bg-green-500 text-green-900">
+                            Desarrollador: {{object.dev}}
+                        </p>
+                        <br>
+                        <p class="card-text bg-green-500 text-green-900">
+                            {{object.descripcion}}
+                        </p>
+                        <p class="card-text bg-green-500 text-green-900 text-right">
+                            {{object.Lenguaje}}
+                        </p>
+
+                    </div>
+                <div class="card-footer bg-green-500 text-green-900  active:bg-green-300 ">
+                    <a href="{{ object.script.url }}">
+                        DESCARGAR
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        {% endfor %} 
+
+    </div>
+</div>
+
+{% endblock content %}

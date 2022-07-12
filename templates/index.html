@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static tailwind_tags %}
+
+<div id="profile" class="w-full lg:w-5/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-9 lg:mx-0">
+
+    <div class="flex flex-wrap mx-3">
+
+        <div class="w-full lg:w-6/12 px-5 ">
+            
+            <!--CONENIDO-->
+            <div class="hero-content">
+                <h1 class=" font-bold text-4xl sm:text-[42px] lg:text-[40px] xl:text-[40px] leading-snug mb-3">CHON'S</h1>
+                <h2 class=" font-bold text-2xl sm:text-[42px] lg:text-[15px] xl:text-[35px] leading-snug mb-3">Bienvenido</h2>
+                <hr>
+
+                <p class="text-base mb-3 text-body-color max-w-[480px]">
+                    <p>Este sitio WEB se desarrollo con la ayuda de :
+                    <p>Framework Django.
+                    <p>Framework css Tailwind
+                    <p>node.js
+
+
+                <!--DETALLES-->
+                <h3 class=" font-bold text-2xl sm:text-[42px] lg:text-[15px] xl:text-[30px] leading-snug mb-3">Detalles</h3>
+                <hr>
+                   <p>pillow==9.1.0
+                   <p>Django==4.0.4
+                   <p>Django-environ==0.8.1
+                   <p>Django-allauth==0.50.0
+                   <p>Django-tailwind==2.3.0
+                <hr>
+                
+                <p class="text-base mb-3 text-body-color max-w-[480px]">
+                    <p>En este sitio WEB podras encontrar :
+                    <p>Mi curriculum
+                    <p>Mi tarjeta de contacto
+                    <p>Algunos proyectos
+                <hr><br/><!--DETALLES-->
+
+                <ul class="flex flex-wrap items-center"><!--Botones-->
+
+                    <li><!--curriculum-->
+                        <a href="{% url 'curriculum:home' %}" class="
+                        duration-500 
+                        transform hover:-translate-y-1 
+                        hover:scale-50
+                        bg-green-400 hover:bg-green-900  py-2 px-4 rounded-full">Curriculum</a>
+                    </li>
+
+                    <li><!--contacto-->
+                        <a href="{% url 'contacto:home' %}" class="
+                        duration-500 
+                        hover:scale-50
+                        bg-green-400 hover:bg-green-900  py-2 px-4 rounded-full">Contacteme</a>
+                    </li>
+
+                </ul>
+
+            </div><!--CONTENIDO-->
+            
+        </div>
+
+        <!--IMAGEN-->
+        <div class="w-full lg:w-6/12 px-4 ">
+            <img src="{% static 'img/chon3.jpg' %}" alt="hero" />
+        </div><!--IMAGEN-->
+
+    </div>
+    
+</div>
+
+{% endblock content %}

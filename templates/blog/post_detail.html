@@ -1,0 +1,194 @@
+{% extends 'base.html' %} {% block content %}
+<!--ImagenDePost-->
+  <div class="card bg-transparent">
+    <img src="{{object.thumbnail.url}}" class="card-img" alt="imagen de post" />
+    <div class="card-img-overlay">
+      <p class="text-base md:text-sm text-green-500 font-bold">~<<a href="{% url 'blog:list' %}"class="bg-green-900 hover:bg-transparent opacity-75 py-2 px-4 rounded-full text-base md:text-sm text-green-100 font-bold no-underline hover:underline">«« Volver a la Lista</a></p>
+      <h5 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">{{object.title}}</h5>
+      <p class="text-xl md:text-base font-normal text-indigo-900">Posteado hace {{object.publish_date|timesince}}</p>
+    </div>
+  </div><!--ImagenDePost-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--BarritaDeColor-->
+  <nav class="fixed w-full z-10 top-0">
+    <div id="progress" class="h-1 z-20 top-0" style="background: linear-gradient(to right,#086306 var(--scroll),transparent 0);">
+
+    </div>
+  </nav><!--BarritaDeColor-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--Container-->
+<div id="profile" class=" w-full max-w-6xl flex-wrap mx-auto my-3 w-full lg:w-5/5  shadow-2xl bg-white opacity-50 mx-6 lg:mx-0">
+
+    <!--contenido -->
+    <div class="w-full px-4 md:px-6 text-xl leading-normal" style="font-family: system-ui;">
+
+<!--Resumen-->
+      <strong style="color: green; font-size: 35px">RESUMEN</strong>
+      <p class="card-text">{{object.abstract|truncatechars:225}}</p>
+      <br />
+<!--Resumen-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--Indice-->
+      <strong style="color: green; font-size: 35px">INDICE </strong>
+      <h2 class="uppercase py-2 font-sans"><a href="#Titulo1">{{object.title_1}}</a></h2>
+      <h3 class="uppercase py-2 font-sans"><a href="#Titulo2">{{object.title_2}}</a></h3>
+      <h4 class="uppercase py-2 font-sans"><a href="#Titulo3">{{object.title_3}}</a></h4>
+      <h4 class="uppercase py-2 font-sans"><a href="#Titulo4">{{object.title_4}}</a></h4>
+      <h4 class="uppercase py-2 font-sans"><a href="#Titulo4">{{object.title_5}}</a></h4>
+
+      <br />
+<!--Indice-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--TEMA_1-->
+      <strong class ="uppercase"style="color: green; font-size: 35px"><section class="resume-section" id="Titulo1">{{object.title_1}}</strong>
+      <p class="py-6">{{object.content_1}}</p>
+<!--TEMA_1-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--CODE_1-->
+      <p class="py-1"style="color: green; font-size: 18px">{{object.nombreco_1}}</p>
+      <div class="flex flex-wrap mx-4">
+      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+            {{object.code_1}}
+      </pre>
+      </div>
+          <br>
+<!--CODE_1-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--CITAS_1-->
+      <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+            {{object.cita_1}}
+      </blockquote>
+      <br />
+<!--CITAS_1-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--TEMA_2-->
+      <strong class ="uppercase" style="color: green; font-size: 35px"><section class="resume-section" id="Titulo2">{{object.title_2}}</strong>
+      <p class="py-6">{{object.content_2}}</p>
+<!--TEMA_2-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--CODE_2-->
+      <p class="py-1"style="color: green; font-size: 18px">{{object.nombreco_2}}</p>
+      <div class="flex flex-wrap mx-4">
+      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+            {{object.code_2}}
+      </pre>
+      </div>
+          <br>
+<!--CODE_2-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--CITAS_2-->
+      <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+            {{object.cita_2}}
+      </blockquote>
+      <br />
+<!--CITAS_2-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--TEMA_3-->
+      <strong class ="uppercase" style="color: green; font-size: 35px"><section class="resume-section" id="Titulo3">{{object.title_3}}</strong>
+      <p class="py-6">{{object.content_3}}</p>
+<!--TEMA_3-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--CODE_3-->
+      <p class="py-1"style="color: green; font-size: 18px">{{object.nombreco_3}}</p>
+      <div class="flex flex-wrap mx-4">
+      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+            {{object.code_3}}
+      </pre>
+      </div>
+          <br>
+<!--CODE_3-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--CITAS_3-->
+      <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+            {{object.cita_3}}
+      </blockquote>
+      <br />
+<!--CITAS_3-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--TEMA_4-->
+      <strong class ="uppercase"style="color: green; font-size: 35px"><section class="resume-section" id="Titulo4">{{object.title_4}}</strong>
+      <p class="py-6">{{object.content_4}}</p>
+<!--TEMA_4-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--CODE_4-->
+      <div class="flex flex-wrap mx-4">
+      <p class="py-1"style="color: green; font-size: 18px">{{object.nombreco_4}}</p>
+      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+            {{object.code_4}}
+      </pre>
+      </div>
+          <br>
+<!--CODE_4-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+
+<!--CITAS_4-->
+      <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+            {{object.cita_4 }}
+      </blockquote>
+<!--CITAS_4-->
+
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+    
+<!--TEMA_5-->
+      <strong class ="uppercase"style="color: green; font-size: 35px"><section class="resume-section" id="Titulo4">{{object.title_5}}</strong>
+      <p class="py-6">{{object.content_5}}</p>
+<!--TEMA_5-->
+      
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+      
+<!--CODE-->
+      <div class="flex flex-wrap mx-4">
+      <p class="py-1"style="color: green; font-size: 18px">{{object.nombreco_5}}</p>
+      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+            {{object.code_5}}
+      </pre>
+      </div>
+            <br>
+<!--CODE-->
+      
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+      
+<!--CITAS_5-->
+      <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+            {{object.cita_5 }}
+      </blockquote>
+<!--CITAS_5-->
+      
+<!--×××~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^~~~_~~*¤****************************************************¤*~~_~~~^^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~×××-->
+          
+  </div><!--contenido -->
+
+  <hr class="border-b-2 bg-transparent mb-8 mx-4" />
+
+</div><!--container-->
+
+{% endblock content %}
