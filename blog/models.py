@@ -15,32 +15,253 @@ class Post(models.Model):
     abstract    = models.TextField()
     thumbnail   = models.ImageField()
 
-    title_1    = models.CharField(blank=True,max_length=50)
+    title_1    = models.CharField(blank=True,max_length=75)
     content_1  = models.TextField(blank=True)
+    
+    subtitle_1_1_1 = models.CharField(blank=True,max_length=75)
+    subcontet_1_1_1 = models.TextField(blank=True)
+    code_1_1_1 = models.TextField(blank=True)
+    puntotitle_1_1_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_1_1 = models.TextField(blank=True)
+    puntotitle_1_2_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_2_1 = models.TextField(blank=True)
+    
+    subtitle_1_1_2 = models.CharField(blank=True,max_length=75)
+    subcontet_1_1_2 = models.TextField(blank=True)
+    code_1_1_2 = models.TextField(blank=True)
+    puntotitle_1_1_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_1_2 = models.TextField(blank=True)
+    puntotitle_1_2_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_2_2 = models.TextField(blank=True)
+    
+    subtitle_1_1_3 = models.CharField(blank=True,max_length=75)
+    subcontet_1_1_3 = models.TextField(blank=True)
+    code_1_1_3 = models.TextField(blank=True)
+    puntotitle_1_1_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_1_3 = models.TextField(blank=True)
+    puntotitle_1_2_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_2_3 = models.TextField(blank=True)
+    
+    subtitle_1_1_4 = models.CharField(blank=True,max_length=75)
+    subcontet_1_1_4 = models.TextField(blank=True)
+    code_1_1_4 = models.TextField(blank=True)
+    puntotitle_1_1_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_1_4 = models.TextField(blank=True)
+    puntotitle_1_2_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_2_4 = models.TextField(blank=True)
+    
+    subtitle_1_1_5 = models.CharField(blank=True,max_length=75)
+    subcontet_1_1_5 = models.TextField(blank=True)
+    code_1_1_5 = models.TextField(blank=True)
+    puntotitle_1_1_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_1_5 = models.TextField(blank=True)
+    puntotitle_1_2_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_1_2_5 = models.TextField(blank=True)    
+    
     nombreco_1 = models.CharField(blank=True,max_length=50)
     code_1     = models.TextField(blank=True)
     cita_1     = models.CharField(max_length=50,blank=True)
 
-    title_2    = models.CharField(blank=True,max_length=50)
+
+
+
+
+    title_2    = models.CharField(blank=True,max_length=75)
     content_2  = models.TextField(blank=True)
+    
+    subtitle_2_1_1 = models.CharField(blank=True,max_length=75)
+    subcontet_2_1_1 = models.TextField(blank=True)
+    code_2_1_1 = models.TextField(blank=True)
+    puntotitle_2_1_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_1_1 = models.TextField(blank=True)
+    puntotitle_2_2_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_2_1 = models.TextField(blank=True)
+    
+    subtitle_2_1_2 = models.CharField(blank=True,max_length=75)
+    subcontet_2_1_2 = models.TextField(blank=True)
+    code_2_1_2 = models.TextField(blank=True)
+    puntotitle_2_1_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_1_2 = models.TextField(blank=True)
+    puntotitle_2_2_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_2_2 = models.TextField(blank=True)
+    
+    subtitle_2_1_3 = models.CharField(blank=True,max_length=75)
+    subcontet_2_1_3 = models.TextField(blank=True)
+    code_2_1_3 = models.TextField(blank=True)
+    puntotitle_2_1_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_1_3 = models.TextField(blank=True)
+    puntotitle_2_2_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_2_3 = models.TextField(blank=True)
+    
+    subtitle_2_1_4 = models.CharField(blank=True,max_length=75)
+    subcontet_2_1_4 = models.TextField(blank=True)
+    code_2_1_4 = models.TextField(blank=True)
+    puntotitle_2_1_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_1_4 = models.TextField(blank=True)
+    puntotitle_2_2_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_2_4 = models.TextField(blank=True)
+    
+    subtitle_2_1_5 = models.CharField(blank=True,max_length=75)
+    subcontet_2_1_5 = models.TextField(blank=True)
+    code_2_1_5 = models.TextField(blank=True)
+    puntotitle_2_1_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_1_5 = models.TextField(blank=True)
+    puntotitle_2_2_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_2_2_5 = models.TextField(blank=True)    
+    
     nombreco_2 = models.CharField(blank=True,max_length=50)
     code_2     = models.TextField(blank=True)
     cita_2     = models.CharField(max_length=50,blank=True)
 
-    title_3    = models.CharField(blank=True,max_length=50)
+
+
+
+
+    title_3    = models.CharField(blank=True,max_length=75)
     content_3  = models.TextField(blank=True)
+    
+    subtitle_3_1_1 = models.CharField(blank=True,max_length=75)
+    subcontet_3_1_1 = models.TextField(blank=True)
+    code_3_1_1 = models.TextField(blank=True)
+    puntotitle_3_1_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_1_1 = models.TextField(blank=True)
+    puntotitle_3_2_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_2_1 = models.TextField(blank=True)
+    
+    subtitle_3_1_2 = models.CharField(blank=True,max_length=75)
+    subcontet_3_1_2 = models.TextField(blank=True)
+    code_3_1_2 = models.TextField(blank=True)
+    puntotitle_3_1_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_1_2 = models.TextField(blank=True)
+    puntotitle_3_2_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_2_2 = models.TextField(blank=True)
+    
+    subtitle_3_1_3 = models.CharField(blank=True,max_length=75)
+    subcontet_3_1_3 = models.TextField(blank=True)
+    code_3_1_3 = models.TextField(blank=True)
+    puntotitle_3_1_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_1_3 = models.TextField(blank=True)
+    puntotitle_3_2_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_2_3 = models.TextField(blank=True)
+    
+    subtitle_3_1_4 = models.CharField(blank=True,max_length=75)
+    subcontet_3_1_4 = models.TextField(blank=True)
+    code_3_1_4 = models.TextField(blank=True)
+    puntotitle_3_1_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_1_4 = models.TextField(blank=True)
+    puntotitle_3_2_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_2_4 = models.TextField(blank=True)
+    
+    subtitle_3_1_5 = models.CharField(blank=True,max_length=75)
+    subcontet_3_1_5 = models.TextField(blank=True)
+    code_3_1_5 = models.TextField(blank=True)
+    puntotitle_3_1_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_1_5 = models.TextField(blank=True)
+    puntotitle_3_2_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_3_2_5 = models.TextField(blank=True)    
+    
     nombreco_3 = models.CharField(blank=True,max_length=50)
     code_3     = models.TextField(blank=True)
     cita_3     = models.CharField(max_length=50,blank=True)
 
-    title_4    = models.CharField(blank=True,max_length=50)
+
+
+
+
+    title_4    = models.CharField(blank=True,max_length=75)
     content_4  = models.TextField(blank=True)
+    
+    subtitle_4_1_1 = models.CharField(blank=True,max_length=75)
+    subcontet_4_1_1 = models.TextField(blank=True)
+    code_4_1_1 = models.TextField(blank=True)
+    puntotitle_4_1_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_1_1 = models.TextField(blank=True)
+    puntotitle_4_2_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_2_1 = models.TextField(blank=True)
+    
+    subtitle_4_1_2 = models.CharField(blank=True,max_length=75)
+    subcontet_4_1_2 = models.TextField(blank=True)
+    code_4_1_2 = models.TextField(blank=True)
+    puntotitle_4_1_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_1_2 = models.TextField(blank=True)
+    puntotitle_4_2_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_2_2 = models.TextField(blank=True)
+    
+    subtitle_4_1_3 = models.CharField(blank=True,max_length=75)
+    subcontet_4_1_3 = models.TextField(blank=True)
+    code_4_1_3 = models.TextField(blank=True)
+    puntotitle_4_1_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_1_3 = models.TextField(blank=True)
+    puntotitle_4_2_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_2_3 = models.TextField(blank=True)
+    
+    subtitle_4_1_4 = models.CharField(blank=True,max_length=75)
+    subcontet_4_1_4 = models.TextField(blank=True)
+    code_4_1_4 = models.TextField(blank=True)
+    puntotitle_4_1_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_1_4 = models.TextField(blank=True)
+    puntotitle_4_2_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_2_4 = models.TextField(blank=True)
+    
+    subtitle_4_1_5 = models.CharField(blank=True,max_length=75)
+    subcontet_4_1_5 = models.TextField(blank=True)
+    code_4_1_5 = models.TextField(blank=True)
+    puntotitle_4_1_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_1_5 = models.TextField(blank=True)
+    puntotitle_4_2_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_4_2_5 = models.TextField(blank=True)    
+    
     nombreco_4 = models.CharField(blank=True,max_length=50)
     code_4     = models.TextField(blank=True)
     cita_4     = models.CharField(max_length=50,blank=True)
 
-    title_5    = models.CharField(blank=True,max_length=50)
+
+
+
+
+    title_5    = models.CharField(blank=True,max_length=75)
     content_5  = models.TextField(blank=True)
+    
+    subtitle_5_1_1 = models.CharField(blank=True,max_length=75)
+    subcontet_5_1_1 = models.TextField(blank=True)
+    code_5_1_1 = models.TextField(blank=True)
+    puntotitle_5_1_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_1_1 = models.TextField(blank=True)
+    puntotitle_5_2_1 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_2_1 = models.TextField(blank=True)
+    
+    subtitle_5_1_2 = models.CharField(blank=True,max_length=75)
+    subcontet_5_1_2 = models.TextField(blank=True)
+    code_5_1_2 = models.TextField(blank=True)
+    puntotitle_5_1_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_1_2 = models.TextField(blank=True)
+    puntotitle_5_2_2 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_2_2 = models.TextField(blank=True)
+    
+    subtitle_5_1_3 = models.CharField(blank=True,max_length=75)
+    subcontet_5_1_3 = models.TextField(blank=True)
+    code_5_1_3 = models.TextField(blank=True)
+    puntotitle_5_1_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_1_3 = models.TextField(blank=True)
+    puntotitle_5_2_3 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_2_3 = models.TextField(blank=True)
+    
+    subtitle_5_1_4 = models.CharField(blank=True,max_length=75)
+    subcontet_5_1_4 = models.TextField(blank=True)
+    code_5_1_4 = models.TextField(blank=True)
+    puntotitle_5_1_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_1_4 = models.TextField(blank=True)
+    puntotitle_5_2_4 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_2_4 = models.TextField(blank=True)
+    
+    subtitle_5_1_5 = models.CharField(blank=True,max_length=75)
+    subcontet_5_1_5 = models.TextField(blank=True)
+    code_5_1_5 = models.TextField(blank=True)
+    puntotitle_5_1_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_1_5 = models.TextField(blank=True)
+    puntotitle_5_2_5 = models.CharField(blank=True,max_length=75)
+    puntocontet_5_2_5 = models.TextField(blank=True)    
+    
     nombreco_5 = models.CharField(blank=True,max_length=50)
     code_5     = models.TextField(blank=True)
     cita_5     = models.CharField(max_length=50,blank=True)

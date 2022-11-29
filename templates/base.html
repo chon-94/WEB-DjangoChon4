@@ -26,45 +26,54 @@
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/dj.ico' %}">
 
   <!--NAV BAR-->
-  <nav class="bg-green-800-opacity p-2 mt-0 fixed w-full z-10 top-0">
-    <div class="container mx-auto flex flex-wrap items-center">
+    <nav class="bg-green-800-opacity p-2 mt-0 fixed w-full z-10 top-0">
+      <div class="container mx-auto flex flex-wrap items-center">
 
-      <!-- NOMBRE Y LOGO -->
-      <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
-        <a class="text-white no-underline hover:text-white hover:no-underline" href="{% url 'home' %}">
-          <span class="text-2xl pl-2 text-green-900"><i class="em em-gear"></i> CHON'S </span>
-        </a>
+        <!-- NOMBRE Y LOGO -->
+          <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
+            <a class="text-white no-underline hover:text-white hover:no-underline" href="{% url 'home' %}">
+              <span class="text-2xl pl-2 text-green-900"><i class="em em-gear"></i> CHON'S </span>
+            </a>
+          </div>
+        <!-- NOMBRE Y LOGO -->
+        
+        <!--OPCIONES  PRINCIPALES-->
+          <div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
+            <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+
+              <!-- Blog-->
+                <li class="mr-3 "> 
+                  <a class="inline-block py-2 px-4 text-green-500 " href="{% url 'blog:home' %}">Blog</a>
+                </li>
+              <!-- Blog-->
+
+              <!-- About -->
+                <li class="mr-3"> 
+                  <a class="inline-block py-2 px-4 text-green-500 " href="{% url 'about:home' %}">About</a>
+                </li>
+              <!-- About -->
+
+              <!-- Contacto -->
+                <li class="mr-3">
+                  <a class="inline-block py-2   px-4 text-green-500 " href="{% url 'contacto:home' %}">contacto</a>
+                </li>
+              <!-- Contacto -->
+              
+              <!-- Vista Nocturna -->
+                <li> 
+                  <div class="absolute top-0 right-0 h-12 w-18 p-4">
+                    <button class="js-change-theme focus:outline-none">🌙</button>
+                  </div>
+                </li>
+              <!-- Vista Nocturna -->
+
+            </ul>
+          </div>
+        <!--OPCIONES  PRINCIPALES-->
+
       </div>
-      <!-- NOMBRE Y LOGO -->
-      
-      <!--OPCIONES  PRINCIPALES-->
-      <div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
-        <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-
-          <li class="mr-3 "> <!-- Blog-->
-            <a class="inline-block py-2 px-4 text-green-500 " href="{% url 'blog:home' %}">Blog</a>
-          </li>
-
-          <li class="mr-3"> <!-- About -->
-            <a class="inline-block py-2 px-4 text-green-500 " href="{% url 'about:home' %}">About</a>
-          </li>
-
-          <li class="mr-3"><!-- Contacto -->
-            <a class="inline-block py-2   px-4 text-green-500 " href="{% url 'contacto:home' %}">contacto</a>
-          </li>
-          
-          <li> <!-- Vista Nocturna -->
-            <div class="absolute top-0 right-0 h-12 w-18 p-4">
-              <button class="js-change-theme focus:outline-none">🌙</button>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-      <!--OPCIONES  PRINCIPALES-->
-
-    </div>
-  </nav><!--NAV BAR-->
+    </nav>
+  <!--NAV BAR-->
   
 </head>
 
@@ -119,7 +128,8 @@
               </path>
             </svg>
           </a>
-        </div><!--BOTENES-->
+        </div>
+        <!--BOTENES-->
 
         <!--TEXTO-->
         <div class="text-center" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -218,7 +228,8 @@
 		document.getElementById('nav-toggle').onclick = function () {
 			document.getElementById("nav-content").classList.toggle("hidden");
 		}
-	</script><!--BARRITA-->
+	</script>
+  <!--BARRITA-->
 
 </body>
 
