@@ -1,92 +1,74 @@
 {% extends 'base.html' %}
-
 {% block content %}
 {% load static tailwind_tags %}
-
 <div class="max-w-4xl flex items-left h-auto lg:h-screen flex-wrap max-w-screen-2xl my-32 lg:my-0">
-    <div class="w-full lg:w-3/3 rounded-lg lg:rounded-l-lg lg:rounded-r-all shadow-2xl bg-white opacity-75 max-w-2 lg:mx-0">
-		<div id="profile" class="p-4 md:p-12 text-center lg:text-left">
-
+    <div id="profile" class="w-full lg:w-3/3 rounded-lg lg:rounded-l-lg lg:rounded-r-all shadow-2xl bg-white opacity-75 max-w-2 lg:mx-0">
+		<div class="p-4 md:p-12 text-center lg:text-left">
             <div class="flex flex-wrap mx-3">
-
-                <div class="w-full lg:w-6/12 px-5 ">
-                    
-                    <!--CONENIDO-->
+                <!--CONTENIDO-->            
+                    <div class="w-full lg:w-6/12 px-5 ">
                         <div class="hero-content">
                             <h1 class=" font-bold text-4xl sm:text-[42px] lg:text-[40px] xl:text-[40px] leading-snug mb-3">CHON'S</h1>
                             <h2 class=" font-bold text-2xl sm:text-[42px] lg:text-[15px] xl:text-[35px] leading-snug mb-3">Bienvenido</h2>
-                            <hr>
-        
-                            <p class="text-base mb-3 text-body-color max-w-[480px]">
+                            
                                 <p>Este sitio WEB se desarrollo con la ayuda de :
                                 <p>Framework Django.
                                 <p>Framework css Tailwind
                                 <p>node.js
-        
-        
-                            <!--DETALLES-->
-                                <h3 class=" font-bold text-2xl sm:text-[42px] lg:text-[15px] xl:text-[30px] leading-snug mb-3">Detalles</h3>
-                                <hr>
-                                <p>pillow==9.1.0
-                                <p>Django==4.0.4
-                                <p>Django-environ==0.8.1
-                                <p>Django-allauth==0.50.0
-                                <p>Django-tailwind==2.3.0
-                                <hr>
-                                
-                                <p class="text-base mb-3 text-body-color max-w-[480px]">
-                                    <p>En este sitio WEB podras encontrar :
-                                    <p>Mi curriculum
-                                    <p>Mi tarjeta de contacto
-                                    <p>Algunos proyectos
-                                <hr><br/>
-                            <!--DETALLES-->
+                            
+                                <!--DETALLES-->
+                                    <h3 class=" font-bold text-2xl sm:text-[42px] lg:text-[15px] xl:text-[35px] leading-snug mb-3">Detalles</h3>
+                                    <p>pillow==9.1.0
+                                    <p>Django==4.0.4
+                                    <p>Django-environ==0.8.1
+                                    <p>Django-allauth==0.50.0
+                                    <p>Django-tailwind==2.3.0
+                                    <hr>
+                                    
+                                        <p>En este sitio WEB podras encontrar :
+                                        <p>Mi curriculum
+                                        <p>Mi tarjeta de contacto
+                                        <p>Algunos proyectos
+                                    <hr><br/>
+                                <!--DETALLES-->
 
-                        <!--curriculum-->
-                            <ul class="flex flex-wrap items-center">      
-                                    <li>
-                                        <a href="{% url 'curriculum:home' %}" class="
-                                        duration-500 
-                                        transform hover:-translate-y-1 
-                                        hover:scale-50
-                                        bg-green-400 hover:bg-green-900  py-2 px-4 rounded-full">Curriculum</a>
-                                    </li>
-                            </ul>
-                        <!--curriculum-->
+                            <!--curriculum-->
+                                <ul class="flex flex-wrap items-center">      
+                                        <li>
+                                            <a href="{% url 'curriculum:home' %}" class="
+                                            duration-500 
+                                            transform hover:-translate-y-1 
+                                            hover:scale-50
+                                            bg-green-400 hover:bg-green-900  py-2 px-4 rounded-full">Curriculum</a>
+                                        </li>
+                                </ul>
+                            <!--curriculum-->
+                                    <br/>
+                            <!--contacto-->
+                                <ul class="flex flex-wrap items-center"> 
+                                        <li>
+                                            <a href="{% url 'contacto:home' %}" class="
+                                            duration-500 
+                                            hover:scale-50
+                                            bg-green-400 hover:bg-green-900  py-2 px-4 rounded-full">Contacteme</a>
+                                        </li>        
+                                </ul>
+                            <!--contacto-->
+                                <br/>
+                            </div>
+                        <!--CONTENIDO-->
+                    </div>
+                <!--CONTENIDO-->
 
-                            <br/>
-                        
-                        <!--contacto-->
-                            <ul class="flex flex-wrap items-center"> 
-                                    <li>
-                                        <a href="{% url 'contacto:home' %}" class="
-                                        duration-500 
-                                        hover:scale-50
-                                        bg-green-400 hover:bg-green-900  py-2 px-4 rounded-full">Contacteme</a>
-                                    </li>        
-                            </ul>
-                        <!--contacto-->
-
-                            <br/>
-        
-                        </div>
-                    <!--CONTENIDO-->
-                    
-                </div>
-        
                 <!--IMAGEN-->
                     <div class="w-full lg:w-6/12 px-4 ">
                         <img src="{% static 'img/chon3.jpg' %}" alt="hero" />
                     </div>
                 <!--IMAGEN-->
-        
+
             </div>
-
-
-            
 		</div>
 	</div>
-    
 </div>
 
 {% endblock content %}
