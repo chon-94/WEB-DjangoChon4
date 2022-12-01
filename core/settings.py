@@ -11,6 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 
+#ALLOWED_HOSTS  = ['www.dparangoludev.com','.dparangoludev.com','dparangoludev.com']
 ALLOWED_HOSTS  = ['*']
 
 INSTALLED_APPS = [
