@@ -5,5 +5,4 @@ app_name="curriculum"
 
 urlpatterns = [
     path('', CurriView.as_view(), name="home"),
-
 ]
