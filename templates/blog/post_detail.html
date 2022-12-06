@@ -1,58 +1,70 @@
-{% extends 'base.html' %} {% block content %}
-<div class="max-w-4xl flex items-left h-auto lg:h-screen flex-wrap max-w-screen-2xl my-32 lg:my-0">
-<div class="p-4 md:p-12">
+{% extends 'base.html' %}
+{% block content %}
+<div 
+      class="max-w-4xl flex items-left h-auto lg:h-screen flex-wrap max-w-screen-2xl my-32 lg:my-0">
+      <div 
+            class="p-4 md:p-12">
 
-      <!--ImagenDePost-->
+            <!--ImagenDePost-->
             <div class="card bg-transparent">
 
-                  <img src="{{object.thumbnail.url}}" class="card-img" alt="imagen de post" />
-                        
+                  <img  
+                        alt="imagen de post" 
+                        src="{{object.thumbnail.url}}" class="card-img" />
+
                   <div class="card-img-overlay">
                         <p class="text-base md:text-sm text-green-500 font-bold">
-                              <a href="{% url 'blog:list' %}"
-                              class="bg-green-900 hover:bg-transparent opacity-75 py-2 px-4 rounded-full text-base md:text-sm text-green-100 font-bold no-underline hover:underline">
+                              <a 
+                                    href="{% url 'blog:list' %}"
+                                    class="bg-green-900 hover:bg-transparent opacity-75 py-2 px-4 rounded-full text-base md:text-sm text-green-100 font-bold no-underline hover:underline">
                                     «« Volver a la Lista
                               </a>
                         </p>
-                              <h5 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">
-                                    {{object.title}}
-                              </h5>
-                        <p class="text-xl md:text-base font-normal text-indigo-900">
+                        <h5 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">
+                              {{object.title}}
+                        </h5>
+
+                        <p 
+                              class="text-xl md:text-base font-normal text-indigo-900">
                               Posteado hace {{object.publish_date|timesince}}
                         </p>
                   </div>
             </div>
-      <!--ImagenDePost-->
+            <!--ImagenDePost-->
 
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
+            <!----------------------------------------------------------------------------------------------------------------------------------------------->
 
-      <!--BarritaDeColor-->
-            <nav class="fixed w-full z-10 top-0">
-                  <div  id="progress" 
-                        class="h-1 z-20 top-0" 
+            <!--BarritaDeColor-->
+            <nav 
+                  class="fixed w-full z-10 top-0">
+                  <div 
+                        id="progress" 
+                        class="h-1 z-20 top-0"
                         style="background: linear-gradient(to right,#086306 var(--scroll),transparent 0);">
                   </div>
             </nav>
-      <!--BarritaDeColor-->
+            <!--BarritaDeColor-->
 
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
+            <!----------------------------------------------------------------------------------------------------------------------------------------------->
 
-<!--Container-->
-      <div  id="profile" 
-            class=" w-full max-w-6xl flex-wrap mx-auto my-3 w-full lg:w-5/5  shadow-2xl bg-white opacity-50 mx-6 lg:mx-0">
-      <!--contenido -->
-            <div class="w-full px-4 md:px-6 text-xl leading-normal" style="font-family: system-ui;">
-                  <!--Resumen-->
+            <!--Container-->
+            <div id="profile"
+                  class=" w-full max-w-6xl flex-wrap mx-auto my-3 w-full lg:w-5/5  shadow-2xl bg-white opacity-50 mx-6 lg:mx-0">
+                  <!--contenido -->
+                  <div 
+                        style="font-family: system-ui;"
+                        class="w-full px-4 md:px-6 text-xl leading-normal" >
+                        <!--Resumen-->
                         <strong style="color: green; font-size: 35px">
                               RESUMEN
                         </strong>
-                        
+
                         <p class="card-text">
                               {{object.abstract|truncatechars:225}}
-                        </p>                             
-                  <!--Resumen-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--Indice-->
+                        </p>
+                        <!--Resumen-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--Indice-->
                         <strong style="color: green; font-size: 35px">
                               INDICE
                         </strong>
@@ -86,21 +98,21 @@
                                     {{object.title_5}}
                               </a>
                         </h4>
-                  <!--Indice-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--TEMA_1-->
-                        <strong class ="uppercase"style="color: green; font-size: 35px">
+                        <!--Indice-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--TEMA_1-->
+                        <strong class="uppercase" style="color: green; font-size: 35px">
                               <section class="resume-section" id="Titulo1">
                                     {{object.title_1}}
                         </strong>
-                        
+
                         <p class="py-6">
                               {{object.content_1}}
                         </p>
-                  <!--TEMA_1-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_1_1-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--TEMA_1-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_1_1-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_1_1_1}}
                               </h1>
@@ -110,13 +122,13 @@
                               {{object.subcontet_1_1_1 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_1_1_1}}
       </pre>
-</div>
-                        
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        </div>
+
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_1_1}}
                               </h2>
@@ -124,17 +136,17 @@
 
                         {{object.puntocontet_1_1_1 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_2_1}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_1_2_1 |linebreaks}}
-                  <!--SUB_TEMA_1_1-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_1_2-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_1_1-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_1_2-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_1_1_2}}
                               </h1>
@@ -144,13 +156,13 @@
                               {{object.subcontet_1_1_2 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_1_1_2}}
       </pre>
-</div>
-                        
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        </div>
+
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_1_2}}
                               </h2>
@@ -158,17 +170,17 @@
 
                         {{object.puntocontet_1_1_2 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_2_2}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_1_2_2 |linebreaks}}
-                  <!--SUB_TEMA_1_2-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_1_3-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_1_2-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_1_3-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_1_1_3}}
                               </h1>
@@ -178,13 +190,13 @@
                               {{object.subcontet_1_1_3 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_1_1_3}}
       </pre>
-</div>
-                        
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        </div>
+
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_1_3}}
                               </h2>
@@ -192,17 +204,17 @@
 
                         {{object.puntocontet_1_1_3 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_2_3}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_1_2_3 |linebreaks}}
-                  <!--SUB_TEMA_1_3-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_1_4-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_1_3-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_1_4-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_1_1_4}}
                               </h1>
@@ -212,13 +224,13 @@
                               {{object.subcontet_1_1_4 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_1_1_4}}
       </pre>
-</div>
-                        
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        </div>
+
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_1_4}}
                               </h2>
@@ -226,17 +238,17 @@
 
                         {{object.puntocontet_1_1_4 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_2_4}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_1_2_4 |linebreaks}}
-                  <!--SUB_TEMA_1_4-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_1_5-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_1_4-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_1_5-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_1_1_5}}
                               </h1>
@@ -246,13 +258,13 @@
                               {{object.subcontet_1_1_5 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_1_1_5}}
       </pre>
-</div>
-                        
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        </div>
+
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_1_5}}
                               </h2>
@@ -260,28 +272,28 @@
 
                         {{object.puntocontet_1_1_5 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_1_2_5}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_1_2_5 |linebreaks}}
-                  <!--SUB_TEMA_1_5-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CODE_1-->
-                        <p class="py-1"style="color: green; font-size: 18px">
+                        <!--SUB_TEMA_1_5-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CODE_1-->
+                        <p class="py-1" style="color: green; font-size: 18px">
                               {{object.nombreco_1}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_1}}
       </pre>
-</div>
-                  <!--CODE_1-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CITAS_1-->
+                        </div>
+                        <!--CODE_1-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CITAS_1-->
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_1_0}}
                         </blockquote>
@@ -297,23 +309,23 @@
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_1_4}}
                         </blockquote>
-                  <!--CITAS_1-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--TEMA_2-->
-                        <strong class ="uppercase"style="color: green; font-size: 35px">
+                        <!--CITAS_1-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--TEMA_2-->
+                        <strong class="uppercase" style="color: green; font-size: 35px">
                               <section class="resume-section" id="Titulo2">
                                     {{object.title_2}}
                         </strong>
-                        
+
                         <p class="py-6">
                               {{object.content_2}}
                         </p>
-                  <!--TEMA_2-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_2_1-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--TEMA_2-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_2_1-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_2_1_1}}
                               </h1>
@@ -323,13 +335,13 @@
                               {{object.subcontet_2_1_1 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_2_1_1}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_1_1}}
                               </h2>
@@ -337,17 +349,17 @@
 
                         {{object.puntocontet_2_1_1 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_2_1}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_2_2_1 |linebreaks}}
-                  <!--SUB_TEMA_2_1-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_2_2-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_2_1-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_2_2-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_2_1_2}}
                               </h1>
@@ -357,13 +369,13 @@
                               {{object.subcontet_2_1_2 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_2_1_2}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_1_2}}
                               </h2>
@@ -371,17 +383,17 @@
 
                         {{object.puntocontet_2_1_2 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_2_2}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_2_2_2 |linebreaks}}
-                  <!--SUB_TEMA_2_2-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_2_3-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_2_2-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_2_3-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_2_1_3}}
                               </h1>
@@ -391,13 +403,13 @@
                               {{object.subcontet_2_1_3 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_2_1_3}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_1_3}}
                               </h2>
@@ -405,17 +417,17 @@
 
                         {{object.puntocontet_2_1_3 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_2_3}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_2_2_3 |linebreaks}}
-                  <!--SUB_TEMA_2_3-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_2_4-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_2_3-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_2_4-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_2_1_4}}
                               </h1>
@@ -425,13 +437,13 @@
                               {{object.subcontet_2_1_4 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_2_1_4}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_1_4}}
                               </h2>
@@ -439,17 +451,17 @@
 
                         {{object.puntocontet_2_1_4 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_2_4}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_2_2_4 |linebreaks}}
-                  <!--SUB_TEMA_2_4-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_2_5-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_2_4-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_2_5-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_2_1_5}}
                               </h1>
@@ -459,13 +471,13 @@
                               {{object.subcontet_2_1_5 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_2_1_5}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_1_5}}
                               </h2>
@@ -473,57 +485,60 @@
 
                         {{object.puntocontet_2_1_5 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_2_2_5}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_2_2_5 |linebreaks}}
-                  <!--SUB_TEMA_2_5-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CODE_2-->
-                        <p class="py-1"style="color: green; font-size: 18px">
+                        <!--SUB_TEMA_2_5-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CODE_2-->
+                        <p class="py-1" style="color: green; font-size: 18px">
                               {{object.nombreco_2}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_2}}
       </pre>
-</div>
-                  <!--CODE_2-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CITAS_2-->
+                        </div>
+                        <!--CODE_2-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CITAS_2-->
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_2_0}}
                         </blockquote>
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_2_1}}
-                        </blockquote>                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+                        </blockquote>
+                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_2_2}}
-                        </blockquote>                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+                        </blockquote>
+                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_2_3}}
-                        </blockquote>                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+                        </blockquote>
+                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_2_4}}
                         </blockquote>
-                  <!--CITAS_2-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--TEMA_3-->
-                        <strong class ="uppercase"style="color: green; font-size: 35px">
+                        <!--CITAS_2-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--TEMA_3-->
+                        <strong class="uppercase" style="color: green; font-size: 35px">
                               <section class="resume-section" id="Titulo3">
                                     {{object.title_3}}
                         </strong>
-                        
+
                         <p class="py-6">
                               {{object.content_3}}
                         </p>
-                  <!--TEMA_3-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_3_1-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--TEMA_3-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_3_1-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_3_1_1}}
                               </h1>
@@ -532,14 +547,14 @@
                         <p align="justify">
                               {{object.subcontet_3_1_1 |linebreaks}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_3_1_1}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_1_1}}
                               </h2>
@@ -547,17 +562,17 @@
 
                         {{object.puntocontet_3_1_1 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_2_1}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_3_2_1 |linebreaks}}
-                  <!--SUB_TEMA_3_1-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_3_2-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_3_1-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_3_2-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_3_1_2}}
                               </h1>
@@ -566,14 +581,14 @@
                         <p align="justify">
                               {{object.subcontet_3_1_2 |linebreaks}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_3_1_2}}
       </pre>
-</div>
-                              
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        </div>
+
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_1_2}}
                               </h2>
@@ -581,17 +596,17 @@
 
                         {{object.puntocontet_3_1_2 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_2_2}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_3_2_2 |linebreaks}}
-                  <!--SUB_TEMA_3_2-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_3_3-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_3_2-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_3_3-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_3_1_3}}
                               </h1>
@@ -600,14 +615,14 @@
                         <p align="justify">
                               {{object.subcontet_3_1_3 |linebreaks}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_3_1_3}}
       </pre>
-</div>
-                              
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        </div>
+
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_1_3}}
                               </h2>
@@ -615,17 +630,17 @@
 
                         {{object.puntocontet_3_1_3 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_2_3}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_3_2_3 |linebreaks}}
-                  <!--SUB_TEMA_3_3-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_3_4-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_3_3-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_3_4-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_3_1_4}}
                               </h1>
@@ -634,14 +649,14 @@
                         <p align="justify">
                               {{object.subcontet_3_1_4 |linebreaks}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_3_1_4}}
       </pre>
-</div>
-                              
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        </div>
+
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_1_4}}
                               </h2>
@@ -649,17 +664,17 @@
 
                         {{object.puntocontet_3_1_4 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_2_4}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_3_2_4 |linebreaks}}
-                  <!--SUB_TEMA_3_4-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_3_5-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_3_4-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_3_5-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_3_1_5}}
                               </h1>
@@ -668,15 +683,15 @@
                         <p align="justify">
                               {{object.subcontet_3_1_5 |linebreaks}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_3_1_5}}
       </pre>
-</div>
+                        </div>
 
-                              
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_1_5}}
                               </h2>
@@ -684,58 +699,61 @@
 
                         {{object.puntocontet_3_1_5 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_3_2_5}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_3_2_5 |linebreaks}}
-                  <!--SUB_TEMA_3_5-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CODE_3-->
-                        <p class="py-1"style="color: green; font-size: 18px">
+                        <!--SUB_TEMA_3_5-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CODE_3-->
+                        <p class="py-1" style="color: green; font-size: 18px">
                               {{object.nombreco_3}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_3}}
       </pre>
-</div>
-                        
-                  <!--CODE_3-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CITAS_3-->
+                        </div>
+
+                        <!--CODE_3-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CITAS_3-->
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_3_0}}
                         </blockquote>
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_3_1}}
-                        </blockquote>                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+                        </blockquote>
+                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_3_2}}
-                        </blockquote>                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+                        </blockquote>
+                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_3_3}}
-                        </blockquote>                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+                        </blockquote>
+                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_3_4}}
                         </blockquote>
-                  <!--CITAS_3-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--TEMA_4-->
-                        <strong class ="uppercase"style="color: green; font-size: 35px">
+                        <!--CITAS_3-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--TEMA_4-->
+                        <strong class="uppercase" style="color: green; font-size: 35px">
                               <section class="resume-section" id="Titulo4">
                                     {{object.title_4}}
                         </strong>
-                        
+
                         <p class="py-6">
                               {{object.content_4}}
                         </p>
-                  <!--TEMA_4-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_4_1-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--TEMA_4-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_4_1-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_4_1_1}}
                               </h1>
@@ -745,13 +763,13 @@
                               {{object.subcontet_4_1_1 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_4_1_1}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_1_1}}
                               </h2>
@@ -759,17 +777,17 @@
 
                         {{object.puntocontet_4_1_1 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_2_1}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_4_2_1 |linebreaks}}
-                  <!--SUB_TEMA_4_1-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_4_2-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_4_1-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_4_2-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_4_1_2}}
                               </h1>
@@ -779,13 +797,13 @@
                               {{object.subcontet_4_1_2 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_4_1_2}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_1_2}}
                               </h2>
@@ -793,17 +811,17 @@
 
                         {{object.puntocontet_4_1_2 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_2_2}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_4_2_2 |linebreaks}}
-                  <!--SUB_TEMA_4_2-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_4_3-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_4_2-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_4_3-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_4_1_3}}
                               </h1>
@@ -813,13 +831,13 @@
                               {{object.subcontet_4_1_3 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_4_1_3}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_1_3}}
                               </h2>
@@ -827,17 +845,17 @@
 
                         {{object.puntocontet_4_1_3 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_2_3}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_4_2_3 |linebreaks}}
-                  <!--SUB_TEMA_4_3-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_4_4-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_4_3-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_4_4-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_4_1_4}}
                               </h1>
@@ -846,13 +864,13 @@
                         <p align="justify">
                               {{object.subcontet_4_1_4 |linebreaks}}
                         </p>
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_4_1_4}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_1_4}}
                               </h2>
@@ -860,17 +878,17 @@
 
                         {{object.puntocontet_4_1_4 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_2_4}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_4_2_4 |linebreaks}}
-                  <!--SUB_TEMA_4_4-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_4_5-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_4_4-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_4_5-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_4_1_5}}
                               </h1>
@@ -879,13 +897,13 @@
                         <p align="justify">
                               {{object.subcontet_4_1_5 |linebreaks}}
                         </p>
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_4_1_5}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_1_5}}
                               </h2>
@@ -893,28 +911,28 @@
 
                         {{object.puntocontet_4_1_5 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_4_2_5}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_4_2_5 |linebreaks}}
-                  <!--SUB_TEMA_4_5-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CODE_4-->
-                        <p class="py-1"style="color: green; font-size: 18px">
+                        <!--SUB_TEMA_4_5-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CODE_4-->
+                        <p class="py-1" style="color: green; font-size: 18px">
                               {{object.nombreco_4}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_4}}
       </pre>
-</div>
-                  <!--CODE_4-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CITAS_4-->
+                        </div>
+                        <!--CODE_4-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CITAS_4-->
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_4_0}}
                         </blockquote>
@@ -930,23 +948,23 @@
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_4_4}}
                         </blockquote>
-                  <!--CITAS_4-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--TEMA_5-->
-                        <strong class ="uppercase"style="color: green; font-size: 35px">
+                        <!--CITAS_4-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--TEMA_5-->
+                        <strong class="uppercase" style="color: green; font-size: 35px">
                               <section class="resume-section" id="Titulo5">
                                     {{object.title_5}}
                         </strong>
-                        
+
                         <p class="py-6">
                               {{object.content_5}}
                         </p>
-                  <!--TEMA_5-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_5_1-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--TEMA_5-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_5_1-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_5_1_1}}
                               </h1>
@@ -956,13 +974,13 @@
                               {{object.subcontet_5_1_1 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_5_1_1}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_1_1}}
                               </h2>
@@ -970,17 +988,17 @@
 
                         {{object.puntocontet_5_1_1 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_2_1}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_5_2_1 |linebreaks}}
-                  <!--SUB_TEMA_5_1-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_5_2-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_5_1-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_5_2-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_5_1_2}}
                               </h1>
@@ -990,13 +1008,13 @@
                               {{object.subcontet_5_1_2 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_5_1_2}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_1_2}}
                               </h2>
@@ -1004,17 +1022,17 @@
 
                         {{object.puntocontet_5_1_2 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_2_2}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_5_2_2 |linebreaks}}
-                  <!--SUB_TEMA_5_2-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_5_3-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_5_2-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_5_3-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_5_1_3}}
                               </h1>
@@ -1024,13 +1042,13 @@
                               {{object.subcontet_5_1_3 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_5_1_3}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_1_3}}
                               </h2>
@@ -1038,17 +1056,17 @@
 
                         {{object.puntocontet_5_1_3 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_2_3}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_5_2_3 |linebreaks}}
-                  <!--SUB_TEMA_5_3-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_5_4-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_5_3-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_5_4-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_5_1_4}}
                               </h1>
@@ -1058,13 +1076,13 @@
                               {{object.subcontet_5_1_4 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_5_1_4}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_1_4}}
                               </h2>
@@ -1072,17 +1090,17 @@
 
                         {{object.puntocontet_5_1_4 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_2_4}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_5_2_4 |linebreaks}}
-                  <!--SUB_TEMA_5_4-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--SUB_TEMA_5_5-->
-                        <strong class ="uppercase"style="color: green; font-size: 25px">
+                        <!--SUB_TEMA_5_4-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--SUB_TEMA_5_5-->
+                        <strong class="uppercase" style="color: green; font-size: 25px">
                               <h1>
                                     {{object.subtitle_5_1_5}}
                               </h1>
@@ -1092,13 +1110,13 @@
                               {{object.subcontet_5_1_5 |linebreaks}}
                         </p>
 
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_5_1_5}}
       </pre>
-</div>
+                        </div>
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_1_5}}
                               </h2>
@@ -1106,47 +1124,51 @@
 
                         {{object.puntocontet_5_1_5 |linebreaks}}
 
-                        <strong class ="uppercase"style="color: green; font-size: 20px">
+                        <strong class="uppercase" style="color: green; font-size: 20px">
                               <h2>
                                     {{object.puntotitle_5_2_5}}
                               </h2>
                         </strong>
 
                         {{object.puntocontet_5_2_5 |linebreaks}}
-                  <!--SUB_TEMA_5_5-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CODE_5-->
-                        <p class="py-1"style="color: green; font-size: 18px">
+                        <!--SUB_TEMA_5_5-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CODE_5-->
+                        <p class="py-1" style="color: green; font-size: 18px">
                               {{object.nombreco_5}}
                         </p>
-                        
-<div class="flex flex-wrap mx-4">
-      <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+
+                        <div class="flex flex-wrap mx-4">
+                              <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
 {{object.code_5}}
       </pre>
-</div>
-                  <!--CODE_5-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-                  <!--CITAS_5-->
+                        </div>
+                        <!--CODE_5-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CITAS_5-->
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_5_0}}
                         </blockquote>
                         <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_5_1}}
-                        </blockquote>                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+                        </blockquote>
+                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_5_2}}
-                        </blockquote>                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+                        </blockquote>
+                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_5_3}}
-                        </blockquote>                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
+                        </blockquote>
+                        <blockquote class="border-l-4 border-green-600 italic my-8 pl-8 md:pl-12">
                               {{object.cita_5_4}}
                         </blockquote>
-                  <!--CITAS_5-->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
-<!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--CITAS_5-->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------------------------------------------->
+                  </div>
+                  <!--contenido -->
             </div>
-      <!--contenido -->
+            <!--container-->
       </div>
-<!--container-->
-</div></div>
+</div>
 {% endblock content %}

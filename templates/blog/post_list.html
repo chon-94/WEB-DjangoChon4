@@ -1,34 +1,78 @@
-{% extends 'base.html' %} 
-{% load static %} 
-{% block content %} 
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 {% for object in object_list %}
 
-<div class="max-w-4xl flex items-left h-auto lg:h-screen flex-wrap max-w-screen-2xl my-32 lg:my-0">
-    <div id="profile" class="w-full lg:w-3/3 rounded-lg lg:rounded-l-lg lg:rounded-r-all shadow-2xl max-w-2 lg:mx-0">
-        <div class="p-4 md:p-12 text-center lg:text-left">
-            <a href="{{ object.get_absolute_url }}">
-                <div class="max-w-2xl mx-auto overflow-hidden bg-white opacity-75 rounded-lg shadow-md dark:bg-gray-800" >
-                    <img class="object-cover w-full h-64"src="{{object.thumbnail.url}}"alt="Article"/>
-                <div class="p-6">
-                    <div >
-                        <span class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">Post {{object.slug}}</span>
-                        <a href="{{ object.get_absolute_url }}"class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline">{{object.title}}</a>
-                        <p href="{{ object.get_absolute_url }}"class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{object.abstract|truncatechars:225}}</p>
+<div 
+    class="max-w-4xl flex items-left h-auto lg:h-screen flex-wrap max-w-screen-2xl my-32 lg:my-0">
+    <div 
+        id="profile" 
+        class="w-full lg:w-3/3 rounded-lg lg:rounded-l-lg lg:rounded-r-all shadow-2xl max-w-2 lg:mx-0">
+        <div 
+            class="p-4 md:p-12 text-center lg:text-left">
+            
+            <a 
+                href="{{ object.get_absolute_url }}"> 
+                <div
+                    class="max-w-2xl mx-auto overflow-hidden bg-white opacity-75 rounded-lg shadow-md dark:bg-gray-800">
+                    
+                    <img 
+                        src="{{object.thumbnail.url}}"
+                        class="object-cover w-full h-64" />
+                    
+                    <div 
+                        class="p-6">
+                        
+                        <div>
+                            <span 
+                                class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">
+                                Post
+                                {{object.slug}}
+                            </span>
+                            <a 
+                                href="{{ object.get_absolute_url }}"
+                                class="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline">{{object.title}}</a>
+                            
+                            <p 
+                                href="{{ object.get_absolute_url }}"
+                                {{object.abstract|truncatechars:225}}
+                                class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                            </p>
+
+                        </div>
+                        
+                        
+                        <div 
+                            class="mt-4">
+                            <div 
+                                class="flex items-center">
+                                <div 
+                                    class="flex items-center">
+                                    <img 
+                                        src="{% static 'img/chon1.jpg' %}"
+                                        class="object-cover h-10 rounded-full" />
+                                    <a 
+                                        href="{{ object.get_absolute_url }}"
+                                        class="mx-2 font-semibold text-gray-700 dark:text-gray-200">
+                                        {{object.author}}
+                                    </a>
+                                </div>
+                                <span 
+                                    class="mx-1 text-xs text-gray-600 dark:text-gray-300">
+                                    posted
+                                    {{object.publish_date|timesince}}ago
+                                </span>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="mt-4">
-                    <div class="flex items-center">
-                    <div class="flex items-center">
-                        <img class="object-cover h-10 rounded-full"src="{% static 'img/chon1.jpg' %}"alt="Avatar"/>
-                        <a href="{{ object.get_absolute_url }}"class="mx-2 font-semibold text-gray-700 dark:text-gray-200">{{object.author}}</a>
-                    </div>
-                      <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">posted {{object.publish_date|timesince}}ago</span>
-                    </div>
-                    </div>
-                </div>
+
                 </div>
             </a>
+
         </div>
     </div>
 </div>
-{% endfor %} 
+
+{% endfor %}
 {% endblock content %}
