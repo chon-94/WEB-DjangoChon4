@@ -114,11 +114,11 @@
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-pillow==9.1.0
-Django==3.2.6
-Django-environ==0.4.5
-Django-allauth==0.50.0
-Django-tailwind==2.2.0
+    pillow==9.1.0
+    Django==3.2.6
+    Django-environ==0.4.5
+    Django-allauth==0.50.0
+    Django-tailwind==2.2.0      
                         </code>
                     </pre>
                 </div>
@@ -164,7 +164,7 @@ Django-tailwind==2.2.0
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-'core',                           
+    'core',                           
                         </code>
                     </pre>
                 </div>                    
@@ -179,8 +179,8 @@ Django-tailwind==2.2.0
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-import os
-import environ                                                                      
+    import os
+    import environ      
                         </code>
                     </pre>
                 </div>
@@ -195,8 +195,8 @@ import environ
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-env    = environ.Env()                                         
-environ.Env.read_env()
+    env    = environ.Env()
+    environ.Env.read_env()      
                         </code>
                     </pre>
                 </div>
@@ -211,23 +211,23 @@ environ.Env.read_env()
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-ALLOWED_HOSTS  = ['*']                                                             
-                        </code>
-                    </pre>
-                </div>                
-                <!--ALLOWED_HOSTS-->
+    ALLOWED_HOSTS  = ['*']      
+                            </code>
+                        </pre>
+                    </div>                
+                    <!--ALLOWED_HOSTS-->
 
-                <br>
+                    <br>
 
-                <p>Ahora instalamos Tailwind esto hara que el proyecto se vea con mas estilo 
+                    <p>Ahora instalamos Tailwind esto hara que el proyecto se vea con mas estilo 
+                        
+                    <p class="py-1"style="color: green; font-size: 18px">INSTALLED_APPS</p>
                     
-                <p class="py-1"style="color: green; font-size: 18px">INSTALLED_APPS</p>
-                
-                <!--INSTALLED_APPS-->
-                <div class="flex flex-wrap mx-4">
-                    <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
-                        <code class="break-words whitespace-pre-wrap ">
-'tailwind',                                                                        
+                    <!--INSTALLED_APPS-->
+                    <div class="flex flex-wrap mx-4">
+                        <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
+                            <code class="break-words whitespace-pre-wrap ">
+    'tailwind',     
                         </code>
                     </div>
                 </pre>
@@ -253,7 +253,7 @@ ALLOWED_HOSTS  = ['*']
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-'theme',                                                                        
+    'theme',        
                         </code>
                     </pre>
                 </div>
@@ -269,8 +269,8 @@ ALLOWED_HOSTS  = ['*']
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-TAILWIND_APP_NAME = 'theme'
-INTERNAL_IPS = ["127.0.0.1",]                                                      
+    TAILWIND_APP_NAME = 'theme'     
+    INTERNAL_IPS = ["127.0.0.1",]
                         </code>
                     </pre>
                 </div>
@@ -296,11 +296,11 @@ INTERNAL_IPS = ["127.0.0.1",]
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-#LINUX
-NPM_BIN = "/usr/bin/npm"
+    #LINUX
+    NPM_BIN = "/usr/bin/npm"
 
-#WINDOWS
-NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"                                  
+    #WINDOWS
+    NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"       
                         </code>
                     </pre>
                 </div>
@@ -314,13 +314,13 @@ NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
                 <div class="flex flex-wrap mx-4">   
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
 
-#añadimos estos urls al final
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]          
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root') 
-MEDIA_URL   = '/media/' 
-MEDIA_ROOT  = os.path.join(BASE_DIR, 'media_static')
+        #añadimos estos urls al final
+        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]       
+        STATIC_ROOT = os.path.join(BASE_DIR, 'static_root') 
+        MEDIA_URL   = '/media/' 
+        MEDIA_ROOT  = os.path.join(BASE_DIR, 'media_static')
                         </code>
                     </pre>
                 </div>
@@ -352,15 +352,15 @@ MEDIA_ROOT  = os.path.join(BASE_DIR, 'media_static')
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-from django.shortcuts import render
-from django.views.generic import View
+    from django.shortcuts import render
+    from django.views.generic import View
 
-class HomeView(View):
-    def get(self,request, *args, **kwargs):
-        context={
-            
-        }
-        return render(request,'index.html', context)                               
+    class HomeView(View):
+        def get(self,request, *args, **kwargs):
+            context={
+                
+            }
+            return render(request,'index.html', context)        
                         </code>
                     </pre>
                 </div>
@@ -374,17 +374,17 @@ class HomeView(View):
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-from django.conf import settings 
-from django.conf.urls.static import static
-from .views import HomeView
-                
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', HomeView.as_view(), name="home"),   
-]        
-if settings.DEBUG: 
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+    from django.conf import settings 
+    from django.conf.urls.static import static
+    from .views import HomeView
+                    
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', HomeView.as_view(), name="home"),
+    ]        
+    if settings.DEBUG: 
+        urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+        urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)      
                         </code>
                     </pre>
                 </div>
@@ -441,10 +441,10 @@ if settings.DEBUG:
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-'curriculum',                                 
-'about',
-'contacto',
-'blog',
+    'curriculum',       
+    'about',
+    'contacto',
+    'blog',
                         </code>
                     </pre>
                 </div>
@@ -460,27 +460,27 @@ if settings.DEBUG:
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-from django.contrib import admin
-from django.urls import path,include
+    from django.contrib import admin
+    from django.urls import path,include
 
-from django.conf import settings 
-from django.conf.urls.static import static
-from .views import HomeView
+    from django.conf import settings 
+    from django.conf.urls.static import static
+    from .views import HomeView
 
-urlpatterns = [
-    path('', HomeView.as_view(), name="home"),
-    path('curriculum/', include('curriculum.urls',namespace='curriculum')),
-    path('contacto/', include('contacto.urls',namespace='contacto')),
-    path('accounts/', include('allauth.urls')),
-    path('admin/', admin.site.urls),
-    path('about/', include('about.urls',namespace='about')),
-    path('blog/', include('blog.urls',namespace='blog')),
+    urlpatterns = [
+        path('', HomeView.as_view(), name="home"),
+        path('curriculum/', include('curriculum.urls',namespace='curriculum')),
+        path('contacto/', include('contacto.urls',namespace='contacto')),
+        path('accounts/', include('allauth.urls')),
+        path('admin/', admin.site.urls),
+        path('about/', include('about.urls',namespace='about')),
+        path('blog/', include('blog.urls',namespace='blog')),
 
-]
+    ]
 
-if settings.DEBUG: 
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+    if settings.DEBUG: 
+        urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+        urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)      
                         </code>
                     </pre>
                 </div>
@@ -498,26 +498,26 @@ if settings.DEBUG:
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-from django.shortcuts import render
-from django.views.generic import View,ListView, DetailView                         
-from .models import Post, Script
-from .forms import PostForm
+    from django.shortcuts import render
+    from django.views.generic import View,ListView, DetailView      
+    from .models import Post, Script
+    from .forms import PostForm
 
-class blogView(View):
-    def get(self,request, *args, **kwargs):
-        context={
-    
-        }
-        return render(request,'blog/blog.html', context)
+    class blogView(View):
+        def get(self,request, *args, **kwargs):
+            context={
+        
+            }
+            return render(request,'blog/blog.html', context)
 
-class ScriptsListView(ListView):
-    model = Script
+    class ScriptsListView(ListView):
+        model = Script
 
-class PostListView(ListView):
-    model = Post
+    class PostListView(ListView):
+        model = Post
 
-class PostDetailView(DetailView):
-    model = Post
+    class PostDetailView(DetailView):
+        model = Post
 
                         </code>
                     </pre>
@@ -532,19 +532,19 @@ class PostDetailView(DetailView):
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-from django.urls import path
-from .views import blogView,PostListView,PostDetailView,ScriptsListView            
+    from django.urls import path
+    from .views import blogView,PostListView,PostDetailView,ScriptsListView     
 
-app_name="blog"
+    app_name="blog"
 
-urlpatterns = [
-    path('', blogView.as_view(), name="home"),
+    urlpatterns = [
+        path('', blogView.as_view(), name="home"),
 
-    path('post/', PostListView.as_view(), name='list'),
-    path('post/<slug>/', PostDetailView.as_view(), name='detail'),
+        path('post/', PostListView.as_view(), name='list'),
+        path('post/<slug>/', PostDetailView.as_view(), name='detail'),
 
-    path('scripts/', ScriptsListView.as_view(),name='lista'),
-]
+        path('scripts/', ScriptsListView.as_view(),name='lista'),
+    ]
                         </code>
                     </pre>
                 </div>
@@ -558,72 +558,72 @@ urlpatterns = [
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-from django.db import models
-# Create your models here.
-from django.contrib.auth.models import AbstractUser
-from django.shortcuts import reverse
+    from django.db import models
+    # Create your models here.
+    from django.contrib.auth.models import AbstractUser
+    from django.shortcuts import reverse
 
-class User(AbstractUser):
-    pass
+    class User(AbstractUser):
+        pass
 
-    def __str__(self):
-        return self.username
+        def __str__(self):
+            return self.username
 
-class Post(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE)                     
-    title  = models.CharField(max_length=50)
-    abstract    = models.TextField()
-    thumbnail   = models.ImageField()
+    class Post(models.Model):
+        author = models.ForeignKey(User, on_delete=models.CASCADE)      
+        title  = models.CharField(max_length=50)
+        abstract    = models.TextField()
+        thumbnail   = models.ImageField()
 
-    title_1    = models.CharField(blank=True,max_length=50)
-    content_1  = models.TextField(blank=True)
-    nombreco_1 = models.CharField(blank=True,max_length=50)
-    code_1     = models.TextField(blank=True)
-    cita_1     = models.CharField(max_length=50,blank=True)
+        title_1    = models.CharField(blank=True,max_length=50)
+        content_1  = models.TextField(blank=True)
+        nombreco_1 = models.CharField(blank=True,max_length=50)
+        code_1     = models.TextField(blank=True)
+        cita_1     = models.CharField(max_length=50,blank=True)
 
-    title_2    = models.CharField(blank=True,max_length=50)
-    content_2  = models.TextField(blank=True)
-    nombreco_2 = models.CharField(blank=True,max_length=50)
-    code_2     = models.TextField(blank=True)
-    cita_2     = models.CharField(max_length=50,blank=True)
-    
-    title_3    = models.CharField(blank=True,max_length=50)
-    content_3  = models.TextField(blank=True)
-    nombreco_3 = models.CharField(blank=True,max_length=50)
-    code_3     = models.TextField(blank=True)
-    cita_3     = models.CharField(max_length=50,blank=True)
+        title_2    = models.CharField(blank=True,max_length=50)
+        content_2  = models.TextField(blank=True)
+        nombreco_2 = models.CharField(blank=True,max_length=50)
+        code_2     = models.TextField(blank=True)
+        cita_2     = models.CharField(max_length=50,blank=True)
+        
+        title_3    = models.CharField(blank=True,max_length=50)
+        content_3  = models.TextField(blank=True)
+        nombreco_3 = models.CharField(blank=True,max_length=50)
+        code_3     = models.TextField(blank=True)
+        cita_3     = models.CharField(max_length=50,blank=True)
 
-    title_4    = models.CharField(blank=True,max_length=50)
-    content_4  = models.TextField(blank=True)
-    nombreco_4 = models.CharField(blank=True,max_length=50)
-    code_4     = models.TextField(blank=True)
-    cita_4     = models.CharField(max_length=50,blank=True)
+        title_4    = models.CharField(blank=True,max_length=50)
+        content_4  = models.TextField(blank=True)
+        nombreco_4 = models.CharField(blank=True,max_length=50)
+        code_4     = models.TextField(blank=True)
+        cita_4     = models.CharField(max_length=50,blank=True)
 
-    title_5    = models.CharField(blank=True,max_length=50)
-    content_5  = models.TextField(blank=True)
-    nombreco_5 = models.CharField(blank=True,max_length=50)
-    code_5     = models.TextField(blank=True)
-    cita_5     = models.CharField(max_length=50,blank=True)
+        title_5    = models.CharField(blank=True,max_length=50)
+        content_5  = models.TextField(blank=True)
+        nombreco_5 = models.CharField(blank=True,max_length=50)
+        code_5     = models.TextField(blank=True)
+        cita_5     = models.CharField(max_length=50,blank=True)
 
-    publish_date = models.DateField(auto_now_add=True)
-    last_updated = models.DateField(auto_now=True)
-    slug = models.SlugField()
-    def __str__(self):
-        return self.title
+        publish_date = models.DateField(auto_now_add=True)
+        last_updated = models.DateField(auto_now=True)
+        slug = models.SlugField()
+        def __str__(self):
+            return self.title
 
-    def get_absolute_url(self):
-        return reverse("blog:detail", kwargs={"slug": self.slug})
+        def get_absolute_url(self):
+            return reverse("blog:detail", kwargs={"slug": self.slug})
 
-class Script(models.Model):
+    class Script(models.Model):
 
-    dev = models.CharField(max_length=25)
-    script = models.FileField()
-    Lenguaje = models.CharField(max_length=25)
-    descripcion = models.CharField(max_length=75)
-    os     = models.CharField(max_length=25)
-    
-    def __str__(self):
-        return self.dev
+        dev = models.CharField(max_length=25)
+        script = models.FileField()
+        Lenguaje = models.CharField(max_length=25)
+        descripcion = models.CharField(max_length=75)
+        os     = models.CharField(max_length=25)
+        
+        def __str__(self):
+            return self.dev
                         </code>
                     </pre>
                 </div>
@@ -637,14 +637,14 @@ class Script(models.Model):
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-from django import forms
-from .models import Post,Script
+    from django import forms
+    from .models import Post,Script
 
-class PostForm(forms.ModelForm):           
-    class Meta:
-        model = Post
-        model = Script
-        fields = ("__all__")
+    class PostForm(forms.ModelForm):        
+        class Meta:
+            model = Post
+            model = Script
+            fields = ("__all__")
                         </code>
                     </pre>
                 </div>
@@ -658,13 +658,13 @@ class PostForm(forms.ModelForm):
                 <div class="flex flex-wrap mx-4">
                     <pre class="flex max-w-4xl bg-indigo-600 rounded text-white font-mono p-0">
                         <code class="break-words whitespace-pre-wrap ">
-from django.contrib import admin
-# Register your models here.
-from .models import Post,User,Script        
+    from django.contrib import admin
+    # Register your models here.
+    from .models import Post,User,Script        
 
-admin.site.register(User)
-admin.site.register(Post)
-admin.site.register(Script)
+    admin.site.register(User)
+    admin.site.register(Post)
+    admin.site.register(Script)
                         </code>
                     </pre>
                 </div>
